@@ -18,7 +18,10 @@ export const TodoPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isEditing) editInputRef.current.focus();
+    if (isEditing) {
+      editInputRef.current.focus();
+      editInputRef.current.selectionStart = editInputRef.current.value.length;
+    }
   }, [isEditing]);
   useEffect(() => {
     getTodoById(id).then((data) => {
@@ -37,7 +40,10 @@ export const TodoPage = () => {
   };
 
   const onConfirmEditTodo = (id, text) => {
-    editTodo(id, text);
+    editTodo(id, text).then((data) => {
+      setTodo(data);
+      setText(data.title);
+    });
     setIsEditing(false);
   };
   const onDeleteTodo = (id) => {
