@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  font-size: 1.3rem;
+}

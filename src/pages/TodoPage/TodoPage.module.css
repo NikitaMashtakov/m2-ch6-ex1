@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.editTodo {
+  font-size: 1.3rem;
+  border: none;
+  width: 100%;
+  min-height: 50px;
+  height: auto;
+  overflow: scroll;
+  resize: none;
+}
+
+.editTodo:focus {
+  border: none;
+  outline: none;
+  background: #ececec;
+}
+
+.title {
+  white-space: normal;
+  overflow: visible;
+  font-size: 1.3rem;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
